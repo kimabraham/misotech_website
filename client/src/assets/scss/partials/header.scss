@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   .header__row {
-    padding: 20px 120px 8px 120px;
+    padding: 20px 7vw 8px 7vw;
     display: flex;
     justify-content: space-between;
     &:last-child {
@@ -46,7 +46,44 @@
       }
     }
     &:last-child {
-      padding: 0;
+      padding: 7px 7vw;
+      .header__column {
+        display: flex;
+        align-items: center;
+        .header__companyName {
+          span {
+            font-weight: 800;
+          }
+        }
+        .header__list {
+          .header__item {
+            font-size: 15px;
+            margin-left: 6vw;
+            &:first-child {
+              margin: 0;
+            }
+            &:last-child {
+              a {
+                font-weight: 800;
+                color: red;
+              }
+            }
+            a {
+              color: white;
+            }
+          }
+        }
+        .header__form {
+          .header__input {
+            width: 8vw;
+            padding: 2px;
+            font-size: 15px;
+          }
+          i {
+            padding-left: 10px;
+          }
+        }
+      }
     }
   }
 }

@@ -32,7 +32,39 @@ const Header = () => {
         </div>
       </div>
       <div className="header__row">
-        <h1>second header</h1>
+        <div className="header__column">
+          <h1 className="header__companyName">
+            주식회사 <span>미소테크</span>
+          </h1>
+        </div>
+        <div className="header__column">
+          <ul className="header__list">
+            <li className="header__item">
+              <a href="">회사소개</a>
+            </li>
+            <li className="header__item">
+              <a href="">제품소개</a>
+            </li>
+            <li className="header__item">
+              <a href="">프로모션</a>
+            </li>
+            <li className="header__item">
+              <a href="">포트폴리오</a>
+            </li>
+            <li className="header__item">
+              <a href="">고객지원</a>
+            </li>
+            <li className="header__item">
+              <a href="">전화상담문의</a>
+            </li>
+          </ul>
+        </div>
+        <div className="header__column">
+          <form className="header__form">
+            <input type="text" className="header__input" />
+            <i className="fas fa-search"></i>
+          </form>
+        </div>
       </div>
     </header>
   );
