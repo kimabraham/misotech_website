@@ -7,7 +7,9 @@ const Header = () => {
       <div className="header__row">
         <div className="header__column">
           <img src={misoLogo} alt="miso_logo" className="header__logo" />
-          <span className="header__span">고객의 미소가 저희의 행복입니다</span>
+          <span className="header__span">
+            고객의 <span>미소</span>가 저희의 <span>행복</span>입니다
+          </span>
         </div>
         <div className="header__column">
           <ul className="header__list">
@@ -29,7 +31,9 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <div className="header__row"></div>
+      <div className="header__row">
+        <h1>second header</h1>
+      </div>
     </header>
   );
 };
