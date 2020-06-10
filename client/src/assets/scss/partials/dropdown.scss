@@ -41,14 +41,15 @@
         padding: 30px 50px;
         background-color: white;
         .dropdown__subColumn {
+          width: 100%;
           &:nth-child(2) {
             margin-top: 15px;
           }
           .dropdown__list {
             display: flex;
             .dropdown__item {
-              width: 6vw;
-              margin-left: 2.5vw;
+              width: 6.5vw;
+              margin-left: 2vw;
               .dropdown__link {
                 color: black;
                 font-size: 15px;

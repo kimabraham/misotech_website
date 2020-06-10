@@ -124,7 +124,7 @@ const ListDataArr = [
           link: '/company/introduce',
         },
         {
-          title: '회원사 가입안내',
+          title: '회원사 안내',
           link: '/company/map',
         },
         {
