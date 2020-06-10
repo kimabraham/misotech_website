@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Home from '../Routes/Home/Home';
 import Header from './Header';
+import Footer from './Footer';
 
 export default () => (
   <Router>
@@ -16,6 +17,7 @@ export default () => (
         <Route path="/" exact component={Home} />
         <Redirect from="*" to="/" />
       </Switch>
+      <Footer />
     </>
   </Router>
 );

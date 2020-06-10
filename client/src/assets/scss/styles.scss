@@ -4,5 +4,6 @@
 
 @import 'partials/header.scss';
 @import 'partials/footer.scss';
-
-@import 'pages/home.scss';
+@import 'partials/dropdown.scss';
+@import 'pages/home/home.scss';
+@import 'pages/home/slideImg.scss';
