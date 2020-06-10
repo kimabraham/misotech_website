@@ -69,6 +69,7 @@
           .header__item {
             font-size: 15px;
             width: 7vw;
+            height: 100%;
             margin-left: 2vw;
             display: flex;
             justify-content: center;
@@ -78,6 +79,12 @@
                 position: absolute;
                 top: 110px;
                 color: black;
+              }
+              background-color: red;
+              &:last-child {
+                .header__link {
+                  color: black;
+                }
               }
             }
             &:first-child {
@@ -99,7 +106,7 @@
                     &:last-child {
                       width: 300px;
                       background-size: cover;
-                      background-image: url('../../img/dropdown_company_img.jpg');
+                      background-image: url('../../img/dropdown_company.png');
                     }
                   }
                 }
@@ -112,7 +119,7 @@
                     &:last-child {
                       width: 300px;
                       background-size: cover;
-                      background-image: url('../../img/dropdown_product_img.jpg');
+                      background-image: url('../../img/dropdown_product.png');
                     }
                   }
                 }
@@ -125,7 +132,7 @@
                     &:last-child {
                       width: 300px;
                       background-size: cover;
-                      background-image: url('../../img/dropdown_promotion_img.jpg');
+                      background-image: url('../../img/dropdown_promotion.png');
                     }
                   }
                 }
@@ -138,7 +145,7 @@
                     &:last-child {
                       width: 300px;
                       background-size: cover;
-                      background-image: url('../../img/dropdown_portfolio_img.jpg');
+                      background-image: url('../../img/dropdown_portfolio.png');
                     }
                   }
                 }
@@ -151,7 +158,7 @@
                     &:last-child {
                       width: 300px;
                       background-size: cover;
-                      background-image: url('../../img/dropdown_customer_img.jpg');
+                      background-image: url('../../img/dropdown_customer.png');
                     }
                   }
                 }

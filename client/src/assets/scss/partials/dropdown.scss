@@ -2,7 +2,7 @@
   position: relative;
   display: none;
   top: 0;
-  left: 21vw;
+  left: 20vw;
   height: 200px;
   z-index: 3000;
   .dropdown__row {
@@ -37,7 +37,7 @@
         }
       }
       &:nth-child(2) {
-        width: 28vw;
+        width: 30vw;
         padding: 30px 50px;
         background-color: white;
         .dropdown__subColumn {
