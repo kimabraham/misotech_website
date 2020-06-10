@@ -1,3 +1,14 @@
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -68,9 +79,9 @@
           height: 100%;
           .header__item {
             font-size: 15px;
-            width: 7vw;
+            width: 8.5vw;
+            margin-left: 0;
             height: 100%;
-            margin-left: 2vw;
             display: flex;
             justify-content: center;
             &:hover {
@@ -78,7 +89,8 @@
                 display: block;
                 position: absolute;
                 top: 110px;
-                color: black;
+                animation: growDown 400ms ease-in-out forwards;
+                transform-origin: top center;
               }
               background-color: red;
               &:last-child {

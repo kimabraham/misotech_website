@@ -1,7 +1,7 @@
 import React from 'react';
-import misoLogo from '../assets/img/misotech_logo.png';
-import Dropdown from './Dropdown';
 
+import Dropdown from './Dropdown';
+import misoLogo from '../assets/img/misotech_logo.png';
 import insta__icon from '../assets/img/icon/instagram_icon.png';
 
 const ListDataArr = [
@@ -142,7 +142,9 @@ const Header = () => {
       <header className="header">
         <div className="header__row">
           <div className="header__column">
-            <img src={misoLogo} alt="miso_logo" className="header__logo" />
+            <a href="/">
+              <img src={misoLogo} alt="miso_logo" className="header__logo" />
+            </a>
             <span className="header__span">
               고객의 <span>미소</span>가 저희의 <span>행복</span>입니다
             </span>
@@ -150,18 +152,18 @@ const Header = () => {
           <div className="header__column">
             <ul className="header__list">
               <li className="header__item">
-                <a href="" className="header__link">
+                <a href="/" className="header__link">
                   로그인
                 </a>
               </li>
               <li className="header__item">
-                <a href="" className="header__link">
+                <a href="/" className="header__link">
                   회원가입
                 </a>
               </li>
               <li className="header__item">
                 <a
-                  href="https://www.instagram.com/misotech/"
+                  href="/https://www.instagram.com/misotech/"
                   target="_blank"
                   className="header__link">
                   <img
@@ -184,14 +186,14 @@ const Header = () => {
             <ul className="header__list">
               {ListDataArr.map((list, index) => (
                 <li className="header__item" key={index}>
-                  <a href="" className="header__link">
+                  <a href="/" className="header__link">
                     {list.mainTitle}
                   </a>
-                  <Dropdown className="dropdown" data={list.dropdownData} />
+                  <Dropdown data={list.dropdownData} />
                 </li>
               ))}
               <li className="header__item">
-                <a href="" className="header__link">
+                <a href="/" className="header__link">
                   전화상담문의
                 </a>
               </li>

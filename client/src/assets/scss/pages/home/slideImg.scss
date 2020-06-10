@@ -1,7 +1,32 @@
 .slideImg__conatiner {
   width: 100vw;
-  height: 42vw;
+  height: 87vh;
   background: url('../../../img/main/home_main_01.jpg');
-  background-size: cover;
-  background-position-y: -80px;
+  background-size: 108% 120vh;
+  background-position-y: -70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title__box {
+    font-family: 'Nanum Myeongjo', serif;
+    writing-mode: vertical-rl;
+    padding: 0 0 10vw 30vw;
+    .home__title {
+      font-size: 2.8vw;
+      letter-spacing: -5px;
+      padding: 1.6vw 0 0 5px;
+      &:last-child {
+        padding: 0;
+        font-size: 2.4vw;
+      }
+      .title__red {
+        color: red;
+        font-weight: 700;
+      }
+      .title__grey {
+        color: grey;
+        font-weight: 500;
+      }
+    }
+  }
 }
