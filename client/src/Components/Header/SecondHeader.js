@@ -231,12 +231,12 @@ const SecondHeader = () => {
         <List>
           {ListDataArr.map((list, index) => (
             <Item key={index}>
-              <SLink href="/">{list.mainTitle}</SLink>
+              <SLink to="/">{list.mainTitle}</SLink>
               <Dropdown data={list.dropdownData} />
             </Item>
           ))}
           <Item>
-            <SLink href="/">전화상담문의</SLink>
+            <SLink to="/">전화상담문의</SLink>
           </Item>
         </List>
       </Column>

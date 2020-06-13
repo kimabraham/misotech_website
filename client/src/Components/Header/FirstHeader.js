@@ -59,7 +59,7 @@ const FirstHeader = () => {
   return (
     <Container>
       <Column>
-        <SLink href="/">
+        <SLink to="/">
           <Logo src={misoLogo} alt="miso_logo" />
         </SLink>
         <Title>
@@ -69,14 +69,14 @@ const FirstHeader = () => {
       <Column>
         <List>
           <Item>
-            <SLink href="/">로그인</SLink>
+            <SLink to="/">로그인</SLink>
           </Item>
           <Item>
-            <SLink href="/">회원가입</SLink>
+            <SLink to="/">회원가입</SLink>
           </Item>
         </List>
         <SLink
-          href="/https://www.instagram.com/misotech/"
+          to="/https://www.instagram.com/misotech/"
           target="_blank"
           style={{ height: '20px' }}>
           <Icon src={instaIcon} alt="instagram_icon" />

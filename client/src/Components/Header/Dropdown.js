@@ -80,7 +80,7 @@ const Dropdown = ({ data }) => {
             <List>
               {sub_menuArr.map((menu, index) => (
                 <Item key={index}>
-                  <SLink href={menu.link}>{menu.title}</SLink>
+                  <SLink to={menu.link}>{menu.title}</SLink>
                 </Item>
               ))}
             </List>
@@ -91,7 +91,7 @@ const Dropdown = ({ data }) => {
               <List>
                 {sub_menuArr.slice(0, 3).map((menu, index) => (
                   <Item key={index}>
-                    <SLink href={menu.link}>{menu.title}</SLink>
+                    <SLink to={menu.link}>{menu.title}</SLink>
                   </Item>
                 ))}
               </List>
@@ -100,7 +100,7 @@ const Dropdown = ({ data }) => {
               <List>
                 {sub_menuArr.slice(3).map((menu, index) => (
                   <Item key={index}>
-                    <SLink href={menu.link}>{menu.title}</SLink>
+                    <SLink to={menu.link}>{menu.title}</SLink>
                   </Item>
                 ))}
               </List>

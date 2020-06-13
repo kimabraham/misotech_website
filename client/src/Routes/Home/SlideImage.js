@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import mainImage1 from '../../assets/img/main/home_main_01.jpg';
 import mainImage2 from '../../assets/img/main/home_main_02.jpg';
@@ -32,12 +32,13 @@ const Nav = styled.span`
   font-weight: 800;
   cursor: pointer;
   margin-left: 8px;
-  color: ${(props) => (props.color ? 'red' : 'black')};
+  color: ${(props) => (props.colorValue ? 'red' : 'black')};
+  transition: color 0.3s;
 `;
 
 const NavText = styled.span`
   margin-left: 10px;
-  color: #636e72;
+  color: #2f3542;
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -54,18 +55,33 @@ const SlideImage = () => {
   const [currentImg, setCurrentImg] = useState(mainImage1);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleBackImg = (v) => {
-    setCurrentImg(v.src);
-    setCurrentIndex(v.id);
+  const handleBackImg = (i) => {
+    setCurrentImg(imgArr[i].src);
+    setCurrentIndex(i);
   };
+
+  const autoImg = () => {
+    setInterval(() => {
+      if (currentIndex === 3) {
+        setCurrentIndex(0);
+        setCurrentImg(imgArr[0].src);
+      } else {
+        setCurrentIndex(currentIndex + 1);
+        setCurrentImg(imgArr[currentIndex + 1].src);
+      }
+    }, 5000);
+  };
+
+  autoImg();
 
   return (
     <Container img={currentImg}>
       <NavbarContainer>
         {imgArr.map((img, index) => (
           <Nav
-            onClick={() => handleBackImg(img)}
-            color={img.id === currentIndex}>
+            onClick={() => handleBackImg(index)}
+            colorValue={img.id === currentIndex}
+            key={index}>
             {img.text}
           </Nav>
         ))}
