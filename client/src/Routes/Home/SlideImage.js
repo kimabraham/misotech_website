@@ -60,19 +60,27 @@ const SlideImage = () => {
     setCurrentIndex(i);
   };
 
-  const autoImg = () => {
-    setInterval(() => {
-      if (currentIndex === 3) {
-        setCurrentIndex(0);
-        setCurrentImg(imgArr[0].src);
-      } else {
-        setCurrentIndex(currentIndex + 1);
-        setCurrentImg(imgArr[currentIndex + 1].src);
-      }
-    }, 5000);
-  };
+  useEffect(() => {
+    const next = (currentIndex + 1) % imgArr.length;
+    const id = setTimeout(() => {
+      handleBackImg(next);
+    }, 3000);
+    return () => clearTimeout(id);
+  }, [currentIndex]);
 
-  autoImg();
+  // const autoImg = () => {
+  //   setInterval(() => {
+  //     if (currentIndex === 3) {
+  //       setCurrentIndex(0);
+  //       setCurrentImg(imgArr[0].src);
+  //     } else {
+  //       setCurrentIndex(currentIndex + 1);
+  //       setCurrentImg(imgArr[currentIndex + 1].src);
+  //     }
+  //   }, 5000);
+  // };
+
+  // autoImg();
 
   return (
     <Container img={currentImg}>
