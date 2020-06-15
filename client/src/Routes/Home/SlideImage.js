@@ -64,7 +64,7 @@ const SlideImage = () => {
     const next = (currentIndex + 1) % imgArr.length;
     const id = setTimeout(() => {
       handleBackImg(next);
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(id);
   }, [currentIndex]);
 
