@@ -2,7 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
 const globalStyles = createGlobalStyle`
-        @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
     ${reset};
     a{
@@ -13,6 +12,12 @@ const globalStyles = createGlobalStyle`
         box-sizing:border-box;
         }
     body{
+        @font-face {
+        font-family: 'NanumSquare';
+        src: url(../assets/font/NanumSquareR.eot);
+        src: url(../assets/font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(../assets/font/NanumSquareR.woff) format('woff'),
+        url(../assets/font/NanumSquareR.ttf) format('truetype');}
         font-family: 'NanumSquare', sans-serif;
         font-size:10px;
     }
