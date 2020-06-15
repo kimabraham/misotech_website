@@ -8,12 +8,11 @@ const globalStyles = createGlobalStyle`
         color:inherit;
     }
     *{
-        font-family: 'Noto Sans KR', sans-serif;
         box-sizing:border-box;
         transform:skew(-0.001deg);
     }
     body{
-        font-family: 'NanumSquare', sans-serif;
+        font-family: 'Nanum Myeongjo', sans-serif;
     }
 `;
 
