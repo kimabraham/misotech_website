@@ -8,7 +8,7 @@ const globalStyles = createGlobalStyle`
         color:inherit;
     }
     *{
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
         box-sizing:border-box;
     }
     body{
