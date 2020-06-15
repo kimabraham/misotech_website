@@ -9,6 +9,7 @@ const Container = styled.div`
   justify-content:space-between
   width: 60vw;
   height: 200px;
+  z-index:300;
 `;
 
 const Column = styled.div`

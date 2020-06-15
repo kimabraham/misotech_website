@@ -7,11 +7,15 @@ import mainImage4 from '../../assets/img/main/main4.png';
 
 const Container = styled.div`
   height: 86vh;
-  background-image: url(${(props) => props.img});
+  background-image: url(${(props) => props.img && props.img});
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+`;
+
+const Preload = styled.div`
+  display: none;
 `;
 
 const TitleBox = styled.div``;
@@ -44,23 +48,28 @@ const NavText = styled.span`
   letter-spacing: 2px;
 `;
 
-const imgArr = [
-  { id: 0, text: 'm', src: mainImage1 },
-  { id: 1, text: 'i', src: mainImage2 },
-  { id: 2, text: 's', src: mainImage3 },
-  { id: 3, text: 'o', src: mainImage4 },
-];
-
 const SlideImage = () => {
+  const imgs = [mainImage1, mainImage2, mainImage3, mainImage4];
+
+  const imgArr = [
+    { id: 0, text: 'm', src: mainImage1 },
+    { id: 1, text: 'i', src: mainImage2 },
+    { id: 2, text: 's', src: mainImage3 },
+    { id: 3, text: 'o', src: mainImage4 },
+  ];
+
   const [currentImg, setCurrentImg] = useState(mainImage1);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleBackImg = (i) => {
-    setCurrentImg(imgArr[i].src);
+    setCurrentImg(imgs[i]);
     setCurrentIndex(i);
   };
 
   useEffect(() => {
+    imgArr.forEach((img) => {
+      new Image().src = img.src;
+    });
     const next = (currentIndex + 1) % imgArr.length;
     const id = setTimeout(() => {
       handleBackImg(next);
@@ -68,22 +77,14 @@ const SlideImage = () => {
     return () => clearTimeout(id);
   }, [currentIndex]);
 
-  // const autoImg = () => {
-  //   setInterval(() => {
-  //     if (currentIndex === 3) {
-  //       setCurrentIndex(0);
-  //       setCurrentImg(imgArr[0].src);
-  //     } else {
-  //       setCurrentIndex(currentIndex + 1);
-  //       setCurrentImg(imgArr[currentIndex + 1].src);
-  //     }
-  //   }, 5000);
-  // };
-
-  // autoImg();
-
   return (
     <Container img={currentImg}>
+      <Preload>
+        <img src={mainImage1} alt="mainImage1" />
+        <img src={mainImage2} alt="mainImage2" />
+        <img src={mainImage3} alt="mainImage3" />
+        <img src={mainImage4} alt="mainImage4" />
+      </Preload>
       <NavbarContainer>
         {imgArr.map((img, index) => (
           <Nav
