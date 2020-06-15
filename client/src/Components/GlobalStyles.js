@@ -10,9 +10,10 @@ const globalStyles = createGlobalStyle`
     *{
         font-family: 'Noto Sans KR', sans-serif;
         box-sizing:border-box;
+        transform:skew(-0.001deg);
     }
     body{
-        font-size:10px;
+        font-family: 'NanumSquare', sans-serif;
     }
 `;
 
