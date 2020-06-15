@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import mainImage1 from '../../assets/img/main/home_main_01.jpg';
-import mainImage2 from '../../assets/img/main/home_main_02.jpg';
-import mainImage3 from '../../assets/img/main/home_main_03.jpg';
-import mainImage4 from '../../assets/img/main/home_main_04.jpg';
+import mainImage1 from '../../assets/img/main/main1.png';
+import mainImage2 from '../../assets/img/main/main2.png';
+import mainImage3 from '../../assets/img/main/main3.png';
+import mainImage4 from '../../assets/img/main/main4.png';
 
 const Container = styled.div`
   height: 86vh;
