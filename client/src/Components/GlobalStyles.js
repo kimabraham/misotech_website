@@ -9,10 +9,9 @@ const globalStyles = createGlobalStyle`
     }
     *{
         box-sizing:border-box;
-        transform:skew(-0.001deg);
     }
     body{
-        font-family: 'Nanum Myeongjo', sans-serif;
+        font-family: 'NanumSquare', sans-serif;
     }
 `;
 
