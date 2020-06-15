@@ -6,7 +6,6 @@ import misoLogo from '../../assets/img/misotech_logo.png';
 import instaIcon from '../../assets/img/icon/instagram_icon.png';
 
 const Container = styled.div`
-  font-family: 'NanumSquare', sans-serif;
   display: flex;
   justify-content: space-between;
   padding: 23px 10vw 5px 10vw;
