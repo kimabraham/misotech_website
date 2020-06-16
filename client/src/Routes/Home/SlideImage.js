@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import mainImage1 from '../../assets/img/main/main1.png';
-import mainImage2 from '../../assets/img/main/main2.png';
-import mainImage3 from '../../assets/img/main/main3.png';
-import mainImage4 from '../../assets/img/main/main4.png';
+import mainImage1 from '../../assets/img/main/main_img_1.png';
+import mainImage2 from '../../assets/img/main/main_img_2.png';
+import mainImage3 from '../../assets/img/main/main_img_3.png';
+import mainImage4 from '../../assets/img/main/main_img_4.png';
 
 const Container = styled.div`
-  height: 86vh;
+  height: 88vh;
   background-image: url(${(props) => props.img && props.img});
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  -webkit-transition: background 1s;
+  -moz-transition: background 1s;
+  -o-transition: background 1s;
+  transition: background 1s;
 `;
 
 const Preload = styled.div`
@@ -32,25 +36,23 @@ const NavbarContainer = styled.div`
 `;
 
 const Nav = styled.span`
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 12px;
   color: ${(props) => (props.colorValue ? 'red' : 'black')};
   transition: color 0.3s;
 `;
 
 const NavText = styled.span`
-  margin-left: 10px;
+  margin-left: 15px;
   color: #2f3542;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 15px;
 `;
 
 const SlideImage = () => {
-  const imgs = [mainImage1, mainImage2, mainImage3, mainImage4];
-
   const imgArr = [
     { id: 0, text: 'm', src: mainImage1 },
     { id: 1, text: 'i', src: mainImage2 },
@@ -62,14 +64,11 @@ const SlideImage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleBackImg = (i) => {
-    setCurrentImg(imgs[i]);
+    setCurrentImg(imgArr[i].src);
     setCurrentIndex(i);
   };
 
   useEffect(() => {
-    imgArr.forEach((img) => {
-      new Image().src = img.src;
-    });
     const next = (currentIndex + 1) % imgArr.length;
     const id = setTimeout(() => {
       handleBackImg(next);
