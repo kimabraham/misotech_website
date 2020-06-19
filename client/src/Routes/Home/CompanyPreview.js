@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import backImg from '../../assets/img/moving_img.png';
 
 const Container = styled.div`
-  height: 80vh;
+  height: 70vh;
   display: flex;
   align-items: center;
 `;

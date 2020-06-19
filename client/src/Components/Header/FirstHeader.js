@@ -10,11 +10,16 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 23px 10vw 5px 10vw;
   background-color: #f1f2f6;
+  min-width: 1100px;
 `;
 
 const Column = styled.div`
+  width: 100%;
   display: flex;
   align-items: flex-end;
+  &:last-child {
+    justify-content: flex-end;
+  }
 `;
 
 const Logo = styled.img`

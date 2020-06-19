@@ -7,33 +7,34 @@ const Container = styled.div`
   top: 110px;
   left: 20vw;
   justify-content:space-between
-  width: 60vw;
+  width: 100%;
   height: 200px;
   z-index:300;
 `;
 
 const Column = styled.div`
-  width: 30vw;
   display: flex;
   flex-direction: column;
   padding: 2vw 3vw;
   &:first-child {
     flex-direction: column;
-    padding: 2vw 1.5vw;
+    padding: 30px 30px;
     width: 200px;
     background: red;
   }
   &:nth-child(2) {
+    width: 500px;
     background: white;
   }
   &:last-child {
-    width: 18vw;
+    width: 300px;
     background-image: url(${(props) => props.backImg});
     background-size: cover;
   }
 `;
 
 const SubColumn = styled.div`
+  width: 500px;
   &:nth-child(2) {
     margin-top: 20px;
   }
@@ -41,7 +42,7 @@ const SubColumn = styled.div`
 
 const Title = styled.h1`
   color: white;
-  font-size: 1vw;
+  font-size: 18px;
   text-transform: uppercase;
 `;
 
@@ -50,7 +51,7 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  width: 8vw;
+  width: 150px;
   &:first-child {
     margin: 0;
   }
@@ -60,7 +61,7 @@ const Item = styled.li`
 const SLink = styled(Link)``;
 
 const Line = styled.div`
-  width: 6vw;
+  width: 110px;
   height: 1px;
   margin: 5px 0;
   background-color: white;

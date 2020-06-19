@@ -15,9 +15,18 @@ const Container = styled.div`
   padding: 0 10vw;
   justify-content: space-between;
   align-items: center;
+  min-width: 1100px;
 `;
 
-const Column = styled.div``;
+const Column = styled.div`
+  &:first-child {
+    min-width: 120.5px;
+  }
+  &:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
 
 const List = styled.ul`
   display: flex;
@@ -40,6 +49,7 @@ export const Item = styled.li`
   width: 8.5vw;
   display: flex;
   justify-content: center;
+  min-width: 95px;
   > div {
     display: none;
   }
@@ -63,8 +73,8 @@ const Icon = styled.i`
 `;
 
 const Title = styled.h1`
-  color: white;
   font-size: 16px;
+  color: white;
 `;
 
 const Text = styled.span`
@@ -75,7 +85,9 @@ const SLink = styled(Link)`
   padding: 8.5px 0;
 `;
 
-const Form = styled.form``;
+const Form = styled.form`
+  min-width: 200px;
+`;
 
 const Input = styled.input`
   font-size: 16px;

@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 const ImgBox = styled.div`
-  width: 30vw;
-  height: 30vw;
+  width: 38vw;
+  height: 38vw;
   background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center center;
@@ -38,8 +38,9 @@ const TextBox = styled.div`
 `;
 
 const Title = styled.h1`
-  margin-bottom: 20px;
-  margin-right: 25px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 25px;
   font-weight: 800;

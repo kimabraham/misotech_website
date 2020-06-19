@@ -5,7 +5,7 @@ import goodCasting from '../../assets/img/drama_1.png';
 const Container = styled.div`
   padding: 0 5vw;
   display: flex;
-  height: 80vh;
+  height: 85vh;
 `;
 
 const LeftBox = styled.div`

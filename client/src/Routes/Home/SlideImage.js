@@ -6,9 +6,10 @@ import mainImage3 from '../../assets/img/main/main_img_3.png';
 import mainImage4 from '../../assets/img/main/main_img_4.png';
 
 const Container = styled.div`
-  height: 88vh;
+  width: 100vw;
+  height: 48vw;
   background-image: url(${(props) => props.img && props.img});
-  background-size: cover;
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;

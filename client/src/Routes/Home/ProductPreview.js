@@ -5,7 +5,7 @@ import Carousel from './Carousel';
 const Container = styled.div`
   padding: 0 5vw;
   display: flex;
-  height: 80vh;
+  height: 85vh;
 `;
 
 const LeftBox = styled.div`
@@ -41,6 +41,7 @@ const Content = styled.p`
 `;
 
 const SecondBox = styled.div`
+  width: 40vw;
   padding-left: 15px;
 `;
 
