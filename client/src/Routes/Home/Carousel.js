@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 const ImgBox = styled.div`
-  width: 38vw;
-  height: 38vw;
+  width: 500px;
+  height: 500px;
   background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center center;
