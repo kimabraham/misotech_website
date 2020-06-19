@@ -8,7 +8,7 @@ import instaIcon from '../../assets/img/icon/instagram_icon.png';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 23px 10vw 5px 10vw;
+  padding: 22px 10vw 5px 10vw;
   background-color: #f1f2f6;
   min-width: 1100px;
 `;
@@ -46,20 +46,20 @@ const Title = styled.h1`
   display: flex;
   align-items: center;
   height: 20px;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 5px;
 `;
 
 const Text = styled.span`
   font-weight: 800;
-  font-size: 18px;
+  font-size: 16px;
   &:first-child {
     color: red;
   }
 `;
 
 const SLink = styled(Link)`
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 const FirstHeader = () => {

@@ -45,9 +45,8 @@ export const Item = styled.li`
     }
   }
   color: white;
-  font-size: 15px;
-  font-weight: 700;
-  width: 8.5vw;
+  font-weight: 400;
+  width: 10vw;
   display: flex;
   justify-content: center;
   min-width: 95px;
@@ -74,18 +73,18 @@ const Icon = styled.i`
 `;
 
 const Title = styled.h1`
-  font-size: 18px;
+  font-size: 16px;
   color: white;
 `;
 
 const Text = styled.span`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
 `;
 
 const SLink = styled(Link)`
   padding: 8.5px 0;
-  font-size: 18px;
+  font-size: 15px;
 `;
 
 const Form = styled.form`
@@ -93,7 +92,7 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  font-size: 16px;
+  font-size: 15px;
 `;
 
 const ListDataArr = [
@@ -250,9 +249,6 @@ const SecondHeader = () => {
               <Dropdown data={list.dropdownData} />
             </Item>
           ))}
-          <Item>
-            <SLink to="/">전화상담문의</SLink>
-          </Item>
         </List>
       </Column>
       <Column>
