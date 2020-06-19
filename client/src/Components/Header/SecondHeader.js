@@ -25,6 +25,7 @@ const Column = styled.div`
   &:last-child {
     display: flex;
     justify-content: flex-end;
+    min-width: 250px;
   }
 `;
 

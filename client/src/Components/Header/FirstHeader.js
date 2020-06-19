@@ -38,7 +38,6 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
-  font-size: 15px;
   margin-left: 40px;
   font-weight: 700;
 `;
@@ -53,12 +52,15 @@ const Title = styled.h1`
 
 const Text = styled.span`
   font-weight: 800;
+  font-size: 16px;
   &:first-child {
     color: red;
   }
 `;
 
-const SLink = styled(Link)``;
+const SLink = styled(Link)`
+  font-size: 15px;
+`;
 
 const FirstHeader = () => {
   return (

@@ -29,7 +29,7 @@ const Column = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   color: white;
@@ -38,7 +38,7 @@ const Title = styled.h1`
 
 const Text = styled.span`
   color: #a4b0be;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 10px;
 `;
 
