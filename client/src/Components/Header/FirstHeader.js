@@ -46,20 +46,20 @@ const Title = styled.h1`
   display: flex;
   align-items: center;
   height: 20px;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 5px;
 `;
 
 const Text = styled.span`
   font-weight: 800;
-  font-size: 16px;
+  font-size: 18px;
   &:first-child {
     color: red;
   }
 `;
 
 const SLink = styled(Link)`
-  font-size: 15px;
+  font-size: 18px;
 `;
 
 const FirstHeader = () => {

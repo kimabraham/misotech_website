@@ -29,8 +29,8 @@ const Column = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   text-transform: uppercase;
   color: white;
   padding-bottom: 20px;
@@ -38,8 +38,9 @@ const Title = styled.h1`
 
 const Text = styled.span`
   color: #a4b0be;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 10px;
+  font-weight: 400;
 `;
 
 const Icon = styled.i`

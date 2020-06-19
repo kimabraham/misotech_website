@@ -74,16 +74,18 @@ const Icon = styled.i`
 `;
 
 const Title = styled.h1`
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 `;
 
 const Text = styled.span`
+  font-size: 18px;
   font-weight: 800;
 `;
 
 const SLink = styled(Link)`
   padding: 8.5px 0;
+  font-size: 18px;
 `;
 
 const Form = styled.form`

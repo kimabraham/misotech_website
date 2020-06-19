@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Carousel from './Carousel';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   padding: 0 5vw;
@@ -53,11 +54,17 @@ const Text = styled.span`
 const Button = styled.button`
   cursor: pointer;
   color: #6d919b;
+  border: 2px solid #6d919b;
   font-size: 14px;
   background: white;
   padding: 18px 35px;
   text-transform: uppercase;
   margin-top: 100px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    color: white;
+    box-shadow: 0 0 40px 40px #6d919b inset;
+  }
 `;
 
 const ProductPreview = () => {
@@ -76,7 +83,9 @@ const ProductPreview = () => {
             <br />
             가볍고 모던한 느낌으로 인테리어 도어로서 큰 인기를 얻고 있습니다.
           </Content>
-          <Button>view more</Button>
+          <Link to="/company/map">
+            <Button>view more</Button>
+          </Link>
         </SecondBox>
       </LeftBox>
       <RightBox>
