@@ -10,27 +10,37 @@ import productImg from '../../assets/img/dropdown_product.png';
 import promotionImg from '../../assets/img/dropdown_promotion.png';
 
 const Container = styled.div`
+  height: 33px;
   display: flex;
   background: black;
-  padding: 0 10vw;
+  padding: 0 180px;
   justify-content: space-between;
   align-items: center;
-  min-width: 1100px;
+  min-width: 1320px;
 `;
 
 const Column = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:first-child {
-    min-width: 120.5px;
+    width: 120px;
+    height: 100%;
+    min-width: 120px;
+  }
+  &:nth-child(2) {
+    justify-content: space-around;
   }
   &:last-child {
-    display: flex;
     justify-content: flex-end;
-    min-width: 250px;
+    min-width: 200px;
   }
 `;
 
 const List = styled.ul`
   display: flex;
+  height: 100%;
 `;
 
 export const Item = styled.li`
@@ -46,9 +56,10 @@ export const Item = styled.li`
   }
   color: white;
   font-weight: 400;
-  width: 10vw;
+  width: 8vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 95px;
   > div {
     display: none;
@@ -79,11 +90,10 @@ const Title = styled.h1`
 
 const Text = styled.span`
   font-size: 16px;
-  font-weight: 800;
+  font-weight: bold;
 `;
 
 const SLink = styled(Link)`
-  padding: 8.5px 0;
   font-size: 15px;
 `;
 
@@ -250,6 +260,9 @@ const SecondHeader = () => {
             </Item>
           ))}
         </List>
+        <Item>
+          <SLink to="/">전화상담문의</SLink>
+        </Item>
       </Column>
       <Column>
         <Form>

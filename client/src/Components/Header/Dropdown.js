@@ -15,7 +15,6 @@ const Container = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2vw 3vw;
   &:first-child {
     flex-direction: column;
     padding: 30px 30px;
@@ -25,6 +24,7 @@ const Column = styled.div`
   &:nth-child(2) {
     width: 500px;
     background: white;
+    padding: 30px 50px;
   }
   &:last-child {
     width: 300px;
@@ -43,6 +43,7 @@ const SubColumn = styled.div`
 const Title = styled.h1`
   color: white;
   font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
 `;
 
@@ -58,7 +59,9 @@ const Item = styled.li`
   color: black;
 `;
 
-const SLink = styled(Link)``;
+const SLink = styled(Link)`
+  font-size: 15px;
+`;
 
 const Line = styled.div`
   width: 110px;

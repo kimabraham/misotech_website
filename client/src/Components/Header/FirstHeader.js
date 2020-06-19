@@ -8,22 +8,22 @@ import instaIcon from '../../assets/img/icon/instagram_icon.png';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 22px 10vw 5px 10vw;
+  padding: 22px 180px 5px 180px;
   background-color: #f1f2f6;
-  min-width: 1100px;
+  min-width: 1320px;
 `;
 
 const Column = styled.div`
-  width: 100%;
   display: flex;
   align-items: flex-end;
   &:last-child {
     justify-content: flex-end;
+    min-width: 216px;
   }
 `;
 
 const Logo = styled.img`
-  height: 48px;
+  width: 120px;
 `;
 
 const Icon = styled.img`
