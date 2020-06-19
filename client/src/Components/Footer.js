@@ -16,7 +16,7 @@ const Column = styled.div`
   &:first-child {
     padding: 0;
     span:last-child {
-      font-size: 10px;
+      font-size: 15px;
       margin-top: 50px;
     }
   }
