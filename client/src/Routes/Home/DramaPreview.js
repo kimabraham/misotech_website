@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import goodCasting from '../../assets/img/drama_1.png';
 
 const Container = styled.div`
-  padding: 0 5vw;
+  padding: 0 7vw;
   display: flex;
   height: 85vh;
 `;
 
 const LeftBox = styled.div`
   width: 100%;
+  min-width: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +18,7 @@ const LeftBox = styled.div`
 
 const RightBox = styled.div`
   width: 100%;
-  height: 100%;
+  min-width: 750px;
   background: url(${(props) => props.backImg});
   background-size: 750px 465px;
   background-position: center center;
@@ -54,12 +55,18 @@ const Text = styled.span`
 
 const Button = styled.button`
   cursor: pointer;
-  color: #6d919b;
+  color: #7f8c8d;
+  border: 2px solid #7f8c8d;
   font-size: 14px;
   background: white;
   padding: 18px 35px;
   text-transform: uppercase;
   margin-top: 100px;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  &:hover {
+    color: white;
+    box-shadow: 0 0 40px 40px #7f8c8d inset;
+  }
 `;
 
 const DramaPreview = () => {

@@ -14,7 +14,8 @@ const LeftBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35vw;
+  width: 30%;
+  min-width: 700px;
   font-size: 40px;
   color: white;
   display: flex;
@@ -22,7 +23,7 @@ const LeftBox = styled.div`
 `;
 
 const RightBox = styled.div`
-  width: 65vw;
+  width: 100%;
   background: black;
   display: flex;
   justify-content: center;

@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import SimpleSlider from './SimpleSlider';
 
 const Container = styled.div`
-  padding: 0 5vw;
+  padding: 0 7vw;
   display: flex;
   height: 85vh;
   min-width: 1400px;
@@ -44,7 +44,7 @@ const Title = styled.h1`
 
 const Content = styled.p`
   margin-top: 50px;
-  color: #6d919b;
+  color: #7f8c8d;
   font-size: 18px;
   line-height: 30px;
 `;
@@ -60,8 +60,8 @@ const Text = styled.span`
 
 const Button = styled.button`
   cursor: pointer;
-  color: #6d919b;
-  border: 2px solid #6d919b;
+  color: #7f8c8d;
+  border: 2px solid #7f8c8d;
   font-size: 14px;
   background: white;
   padding: 18px 35px;
@@ -70,7 +70,7 @@ const Button = styled.button`
   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   &:hover {
     color: white;
-    box-shadow: 0 0 40px 40px #6d919b inset;
+    box-shadow: 0 0 40px 40px #7f8c8d inset;
   }
 `;
 
@@ -84,7 +84,7 @@ const ProductPreview = () => {
         </FirstBox>
         <SecondBox>
           <Content>
-            시원한 개폐공간 활용에 탁월한 효과를 가진 원슬라이딩 도어는
+            시원한 개폐공간 활용에 탁월한 효과를 가진 슬림도어는
             <br />
             좁은 현관이라도 넓은 시야와 공간이 확보되는 장점과 함께
             <br />

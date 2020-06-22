@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   position: absolute;
-  top: 115px;
+  top: 110px;
   left: 20vw;
   justify-content:space-between
   width: 100%;

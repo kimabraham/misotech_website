@@ -8,7 +8,7 @@ import hinge_door from '../../assets/img/productCarousel/hinge_door.png';
 import swing_door from '../../assets/img/productCarousel/swing_door.png';
 
 const Container = styled.div`
-  padding-left: 50px;
+  padding-left: 100px;
   width: 35vw;
   min-width: 460px;
   .slick-next,
@@ -17,7 +17,7 @@ const Container = styled.div`
   .slick-next::before,
   .slick-prev::before {
     color: #2f3542;
-    font-size: 3vw;
+    font-size: 2vw;
     opacity: 1;
   }
   .slick-arrow:hover {

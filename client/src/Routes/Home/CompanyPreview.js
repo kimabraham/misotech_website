@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import backImg from '../../assets/img/moving_img.png';
+import { useState } from 'react';
+
+const vw = window.innerWidth / 100;
 
 const Container = styled.div`
   height: 70vh;
@@ -16,48 +19,81 @@ const ImgBox = styled.div`
   background-size: 1905px 465px;
   background-position: center center;
   background-repeat: no-repeat;
+  display: flex;
 `;
 
 const Box = styled.div`
   height: 100%;
   position: relative;
-  right: -1050px;
+  right: ${(props) => props.location};
   padding: 0 50px;
   background: rgba(245, 7, 7, 0.7);
   color: white;
-  width: 35%;
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items:${(props) => props.alignItems}
+  border: 1px solid black;
 `;
 
 const Title = styled.h1`
-  font-size: 40px;
+  text-align: ${(props) => props.textAlign};
+  font-size: 2vw;
   font-weight: 800;
   margin: 14px 0 50px 0;
 `;
 
 const Text = styled.span`
-  text-align: end;
-  font-size: 18px;
-  line-height: 30px;
+  text-align: ${(props) => props.textAlign};
+  font-size: 1vw;
+  line-height: 1.8vw;
+  width: 100%;
+  word-break: keep-all;
 `;
 
+const contents = [
+  {
+    title: '행복한 공간 이야기 미소테크',
+    description1: `인테리어 디자인 도어의 미래를 개척하는 혁신 기업입니다.  `,
+    description2: `완벽한 공간연출과 인테리어 기능을 동시에 디자인하는`,
+    description3: `전문가 집단이 끊임없이 연구하는 창조 기업입니다.`,
+    alignItems: 'flex-start',
+    textAlign: 'start',
+  },
+  {
+    title: 'MISOTECH의 기술력',
+    description1:
+      '개발자 출신의 대표를 비롯한 전문기술인들로 구성된 기업입니다.',
+    description2: '연구 전담부서를 운영하며 기술력과 자재를 개발하고 있으며,',
+    description3: '디자인 특허 30여종을 비롯해 다수의 기술특허를 자랑합니다.',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  {
+    title: '信義를 약속하는 미소테크',
+    description1:
+      '정직한 마음으로 고객을 위하고 더 나은 기술력으로 신의를 약속합니다.',
+    description2: '고객이 아름다운 공간에서 행복한 생활을 할 수 있도록',
+    description3: '신의를 지키며 공간의 가치를 창조하겠습니다.',
+    alignItems: 'flex-end',
+    textAlign: 'end',
+  },
+];
+
 const CompanyPreview = () => {
+  const [show, setShow] = useState('block');
   return (
     <Container>
       <ImgBox backImg={backImg}>
-        <Box>
-          <Title>행복한 공간 이야기 미소테크</Title>
-          <Text>
-            인테리어 디자인 도어의 미래를 개척하는 혁신 기업입니다.
-            <br />
-            완벽한 공간연출과 인테리어 기능을 동시에 디자인하는
-            <br />
-            전문가 집단이 끊임없이 연구하는 창조 기업입니다.
-          </Text>
-        </Box>
+        {contents.map((content, index) => (
+          <Box key={index} alignItems={content.alignItems}>
+            <Title textAlign={content.textAlign}>{content.title}</Title>
+            <Text textAlign={content.textAlign}>{content.description1}</Text>
+            <Text textAlign={content.textAlign}>{content.description2}</Text>
+            <Text textAlign={content.textAlign}>{content.description3}</Text>
+          </Box>
+        ))}
       </ImgBox>
     </Container>
   );

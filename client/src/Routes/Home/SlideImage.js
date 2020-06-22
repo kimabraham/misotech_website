@@ -90,10 +90,10 @@ const SlideImage = () => {
             onClick={() => handleBackImg(index)}
             colorValue={img.id === currentIndex}
             key={index}>
-            {img.text}
+            {img.text}&nbsp;&nbsp;&nbsp;
           </Nav>
         ))}
-        <NavText>tech</NavText>
+        <NavText>t&nbsp;e&nbsp;c&nbsp;h</NavText>
       </NavbarContainer>
     </Container>
   );

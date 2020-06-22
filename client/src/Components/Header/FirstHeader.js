@@ -8,12 +8,13 @@ import instaIcon from '../../assets/img/icon/instagram_icon.png';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 180px 4px 180px;
+  padding: 22px 180px 5px 180px;
   background-color: #f1f2f6;
   min-width: 1320px;
 `;
 
 const Column = styled.div`
+  padding-left: 10px;
   display: flex;
   align-items: flex-end;
   &:last-child {
@@ -23,7 +24,7 @@ const Column = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 140px;
+  width: 120px;
 `;
 
 const Icon = styled.img`
