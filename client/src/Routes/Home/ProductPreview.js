@@ -23,7 +23,6 @@ const LeftBox = styled.div`
 `;
 
 const RightBox = styled.div`
-  min-width: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
