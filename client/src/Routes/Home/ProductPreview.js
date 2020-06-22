@@ -11,7 +11,7 @@ const Container = styled.div`
   padding: 0 5vw;
   display: flex;
   height: 85vh;
-  min-width: 1300px;
+  min-width: 1400px;
 `;
 
 const LeftBox = styled.div`
@@ -27,6 +27,7 @@ const RightBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 700px;
 `;
 
 const FirstBox = styled.div`

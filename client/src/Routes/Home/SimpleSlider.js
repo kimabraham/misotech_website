@@ -8,7 +8,9 @@ import hinge_door from '../../assets/img/productCarousel/hinge_door.png';
 import swing_door from '../../assets/img/productCarousel/swing_door.png';
 
 const Container = styled.div`
+  padding-left: 50px;
   width: 35vw;
+  min-width: 460px;
   .slick-next,
   .slick-prev {
   }
@@ -35,22 +37,12 @@ const Container = styled.div`
 const Box = styled.div``;
 
 const Img = styled.img`
-  width: 35vw;
-  height: 35vw;
+  width: 100%;
+  height: 100%;
 `;
 
-const NavBox = styled.div`
-  display: flex;
-  align-items: center;
-  &:last-child {
-    margin-left: 30px;
-  }
-`;
-
-const Nav = styled.i`
-  cursor: pointer;
-  color: #8f8f8f;
-  font-size: 40px;
+const Preloading = styled.div`
+  display: none;
 `;
 
 const SimpleSlider = () => {
@@ -64,6 +56,13 @@ const SimpleSlider = () => {
   };
   return (
     <Container>
+      <Preloading>
+        <img src={one_sliding_door} alt="" />
+        <img src={fix_door} alt="" />
+        <img src={three_sliding_door} alt="" />
+        <img src={hinge_door} alt="" />
+        <img src={swing_door} alt="" />
+      </Preloading>
       <Slider {...settings}>
         <Box>
           <Img src={one_sliding_door} alt="one_sliding_door" />

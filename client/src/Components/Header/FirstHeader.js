@@ -23,7 +23,7 @@ const Column = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 120px;
+  width: 125px;
 `;
 
 const Icon = styled.img`
