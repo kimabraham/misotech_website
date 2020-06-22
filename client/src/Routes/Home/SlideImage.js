@@ -7,7 +7,7 @@ import mainImage4 from '../../assets/img/main/main_img_4.png';
 
 const Container = styled.div`
   width: 100vw;
-  height: 45vw;
+  height: 43vw;
   background-image: url(${(props) => props.img && props.img});
   background-size: 100% 100%;
   display: flex;

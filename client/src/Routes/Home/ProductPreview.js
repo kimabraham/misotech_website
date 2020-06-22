@@ -1,21 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import Carousel from './Carousel';
 import { Link } from 'react-router-dom';
+// import Carousel from './Carousel';
+import Carousel from './Carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import SimpleSlider from './SimpleSlider';
 
 const Container = styled.div`
   padding: 0 5vw;
   display: flex;
   height: 85vh;
+  min-width: 1300px;
 `;
 
 const LeftBox = styled.div`
   width: 100%;
+  min-width: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
+
 const RightBox = styled.div`
+  min-width: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -42,7 +50,6 @@ const Content = styled.p`
 `;
 
 const SecondBox = styled.div`
-  width: 40vw;
   padding-left: 15px;
 `;
 
@@ -89,7 +96,8 @@ const ProductPreview = () => {
         </SecondBox>
       </LeftBox>
       <RightBox>
-        <Carousel />
+        <SimpleSlider />
+        {/* <Carousel /> */}
       </RightBox>
     </Container>
   );
