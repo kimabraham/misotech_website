@@ -25,7 +25,7 @@ const Column = styled.div`
   justify-content: center;
   align-items: center;
   &:first-child {
-    width: 125px;
+    width: 140px;
     height: 100%;
     min-width: 120px;
   }

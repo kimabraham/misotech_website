@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   position: absolute;
-  top: 110px;
+  top: 115px;
   left: 20vw;
   justify-content:space-between
   width: 100%;
@@ -61,6 +61,7 @@ const Item = styled.li`
 
 const SLink = styled(Link)`
   font-size: 15px;
+  font-weight: 600;
 `;
 
 const Line = styled.div`
