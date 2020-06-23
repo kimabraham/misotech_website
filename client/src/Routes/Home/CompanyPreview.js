@@ -27,48 +27,50 @@ const Wrap = styled.div`
 `;
 
 const Box = styled.div`
-@keyframes fadein {
+  @keyframes fadein {
     0% {
-        opacity:0;
+      opacity: 0;
     }
     20% {
-        opacity:1;
+      opacity: 1;
     }
-    80%{
-      opacity:1;
+    80% {
+      opacity: 1;
     }
-    100%{
-      opacity:0;
+    100% {
+      opacity: 0;
     }
-}
-@-moz-keyframes fadein { /* Firefox */
+  }
+  @-moz-keyframes fadein {
+    /* Firefox */
     0% {
-        opacity:0;
+      opacity: 0;
     }
     20% {
-        opacity:1;
+      opacity: 1;
     }
-    80%{
-      opacity:1;
+    80% {
+      opacity: 1;
     }
-    100%{
-      opacity:0;
+    100% {
+      opacity: 0;
     }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
+  }
+  @-webkit-keyframes fadein {
+    /* Safari and Chrome */
     0% {
-        opacity:0;
+      opacity: 0;
     }
     20% {
-        opacity:1;
+      opacity: 1;
     }
-    80%{
-      opacity:1;
+    80% {
+      opacity: 1;
     }
-    100%{
-      opacity:0;
+    100% {
+      opacity: 0;
     }
-}
+  }
   height: 100%;
   position: relative;
   padding: 0 40px;
@@ -77,17 +79,16 @@ const Box = styled.div`
   width: 33vw;
   display: ${(props) => (props.display ? 'flex' : 'none')};
   flex-direction: column;
-  justify-content: center; */
+  justify-content: center;
   align-items: ${(props) => props.alignItems};
-  animation: fadein 20s;
-    -moz-animation: fadein 20s; /* Firefox */
-    -webkit-animation: fadein 20s; /* Safari and Chrome */
-    -o-animation: fadein 20s; /* Opera */
+  animation: fadein 15s;
+  -moz-animation: fadein 15s; /* Firefox */
+  -webkit-animation: fadein 15s; /* Safari and Chrome */
+  -o-animation: fadein 15s; /* Opera */
 `;
 
 const Title = styled.h1`
   text-align: ${(props) => props.textAlign};
-  text-align: center;
   font-size: 1.8vw;
   font-weight: 800;
   margin: 14px 0 50px 0;
@@ -95,7 +96,6 @@ const Title = styled.h1`
 
 const Text = styled.span`
   text-align: ${(props) => props.textAlign};
-  text-align: center;
   font-size: 0.9vw;
   line-height: 1.8vw;
   width: 100%;
@@ -138,7 +138,7 @@ const CompanyPreview = () => {
     const next = (show + 1) % contents.length;
     const id = setTimeout(() => {
       setShow(next);
-    }, 20000);
+    }, 15000);
     return () => clearTimeout(id);
   }, [show]);
 
