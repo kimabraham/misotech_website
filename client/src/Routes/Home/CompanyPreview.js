@@ -1,10 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import backImg from '../../assets/img/moving_img.png';
 import { useState } from 'react';
-
-const vw = window.innerWidth / 100;
 
 const Container = styled.div`
   height: 70vh;
@@ -22,23 +20,74 @@ const ImgBox = styled.div`
   display: flex;
 `;
 
+const Wrap = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: ${(props) => props.alignItems};
+`;
+
 const Box = styled.div`
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    20% {
+        opacity:1;
+    }
+    80%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    0% {
+        opacity:0;
+    }
+    20% {
+        opacity:1;
+    }
+    80%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    0% {
+        opacity:0;
+    }
+    20% {
+        opacity:1;
+    }
+    80%{
+      opacity:1;
+    }
+    100%{
+      opacity:0;
+    }
+}
   height: 100%;
   position: relative;
-  right: ${(props) => props.location};
   padding: 0 40px;
   background: rgba(245, 7, 7, 0.7);
   color: white;
-  width:100%;
-  display: flex;
+  width: 33vw;
+  display: ${(props) => (props.display ? 'flex' : 'none')};
   flex-direction: column;
-  justify-content: center;
-  align-items:${(props) => props.alignItems}
-  border: 1px solid black;
+  justify-content: center; */
+  align-items: ${(props) => props.alignItems};
+  animation: fadein 20s;
+    -moz-animation: fadein 20s; /* Firefox */
+    -webkit-animation: fadein 20s; /* Safari and Chrome */
+    -o-animation: fadein 20s; /* Opera */
 `;
 
 const Title = styled.h1`
   text-align: ${(props) => props.textAlign};
+  text-align: center;
   font-size: 1.8vw;
   font-weight: 800;
   margin: 14px 0 50px 0;
@@ -46,6 +95,7 @@ const Title = styled.h1`
 
 const Text = styled.span`
   text-align: ${(props) => props.textAlign};
+  text-align: center;
   font-size: 0.9vw;
   line-height: 1.8vw;
   width: 100%;
@@ -82,17 +132,28 @@ const contents = [
 ];
 
 const CompanyPreview = () => {
-  const [show, setShow] = useState('block');
+  const [show, setShow] = useState(0);
+
+  useEffect(() => {
+    const next = (show + 1) % contents.length;
+    const id = setTimeout(() => {
+      setShow(next);
+    }, 20000);
+    return () => clearTimeout(id);
+  }, [show]);
+
   return (
     <Container>
       <ImgBox backImg={backImg}>
         {contents.map((content, index) => (
-          <Box key={index} alignItems={content.alignItems}>
-            <Title textAlign={content.textAlign}>{content.title}</Title>
-            <Text textAlign={content.textAlign}>{content.description1}</Text>
-            <Text textAlign={content.textAlign}>{content.description2}</Text>
-            <Text textAlign={content.textAlign}>{content.description3}</Text>
-          </Box>
+          <Wrap key={index} alignItems={content.alignItems}>
+            <Box alignItems={content.alignItems} display={index === show}>
+              <Title textAlign={content.textAlign}>{content.title}</Title>
+              <Text textAlign={content.textAlign}>{content.description1}</Text>
+              <Text textAlign={content.textAlign}>{content.description2}</Text>
+              <Text textAlign={content.textAlign}>{content.description3}</Text>
+            </Box>
+          </Wrap>
         ))}
       </ImgBox>
     </Container>
