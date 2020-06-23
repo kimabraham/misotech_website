@@ -26,7 +26,7 @@ const Box = styled.div`
   height: 100%;
   position: relative;
   right: ${(props) => props.location};
-  padding: 0 50px;
+  padding: 0 40px;
   background: rgba(245, 7, 7, 0.7);
   color: white;
   width:100%;
@@ -39,14 +39,14 @@ const Box = styled.div`
 
 const Title = styled.h1`
   text-align: ${(props) => props.textAlign};
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 800;
   margin: 14px 0 50px 0;
 `;
 
 const Text = styled.span`
   text-align: ${(props) => props.textAlign};
-  font-size: 1vw;
+  font-size: 0.9vw;
   line-height: 1.8vw;
   width: 100%;
   word-break: keep-all;
