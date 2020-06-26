@@ -115,7 +115,7 @@ const ListDataArr = [
       sub_menuArr: [
         {
           title: '인사말/회사연혁',
-          link: '/company/introduce',
+          link: '/company/intro',
         },
         {
           title: '오시는길',
