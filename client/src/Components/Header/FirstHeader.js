@@ -84,7 +84,7 @@ const FirstHeader = () => {
           </Item>
         </List>
         <SLink
-          to="/https://www.instagram.com/misotech/"
+          to="https://www.instagram.com/misotech_slimdoor/"
           target="_blank"
           style={{ height: '20px' }}>
           <Icon src={instaIcon} alt="instagram_icon" />
