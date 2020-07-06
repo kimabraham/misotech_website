@@ -20,7 +20,7 @@ export default () => (
         <Route path="/" exact component={Home} />
         <Route path="/company/intro" exact component={Intro} />
         <Route path="/company/map" exact component={Map} />
-        <Route path="/products" exact component={Products} />
+        <Route path="/products/:id" exact component={Products} />
         <Redirect from="*" to="/" />
       </Switch>
       <Footer />

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps';
 
 const Container = styled.div`
   padding: 2vw 10vw;
@@ -18,8 +19,10 @@ const Text = styled.span`
 `;
 
 const Wrap = styled.div`
+  margin-top: 3vw;
   &:last-child {
-    padding: 0 5vw;
+    margin-top: 0;
+    padding: 3vw 5vw;
   }
 `;
 
@@ -66,7 +69,17 @@ const Map = () => {
         참고하셔서 편안하게 오시기 바랍니다.
       </Text>
       <Wrap>
-        <h1>네이버 지도</h1>
+        <RenderAfterNavermapsLoaded clientId="2zwuxnq8jh">
+          <NaverMap
+            mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
+            style={{
+              width: '100%',
+              height: '50vw',
+            }}
+            defaultCenter={{ lat: 37.3595704, lng: 127.105399 }}
+            defaultZoom={10}
+          />
+        </RenderAfterNavermapsLoaded>
       </Wrap>
       <Wrap>
         <Box>
