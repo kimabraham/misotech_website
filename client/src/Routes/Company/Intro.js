@@ -3,9 +3,12 @@ import styled from 'styled-components';
 import IntroHeader from '../../assets/img/company/IntroHeader.png';
 import IntroBody from '../../assets/img/company/IntroBody.png';
 
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100vw;
+`;
 
 const Header = styled.div`
+  width: 100%;
   background: url(${IntroHeader});
   background-size: 100%;
   background-position: center;
@@ -14,6 +17,7 @@ const Header = styled.div`
 `;
 
 const Body = styled.div`
+  width: 100%;
   background: url(${IntroBody});
   background-size: 100%;
   background-position: center;

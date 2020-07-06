@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Header from './Header/Header';
 import Intro from '../Routes/Company/Intro';
 import Map from '../Routes/Company/Map';
+import Products from '../Routes/Product/Products';
 
 export default () => (
   <Router>
@@ -19,6 +20,7 @@ export default () => (
         <Route path="/" exact component={Home} />
         <Route path="/company/intro" exact component={Intro} />
         <Route path="/company/map" exact component={Map} />
+        <Route path="/products" exact component={Products} />
         <Redirect from="*" to="/" />
       </Switch>
       <Footer />

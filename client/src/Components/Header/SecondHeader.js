@@ -134,27 +134,23 @@ const ListDataArr = [
       sub_menuArr: [
         {
           title: '슬라이딩 도어',
-          link: '/company/introduce',
+          link: '/products/one',
         },
         {
           title: '연동 도어',
-          link: '/company/map',
+          link: '/products/link',
         },
         {
           title: '여닫이 도어',
-          link: '/company/map',
+          link: '/products/hinge',
         },
         {
           title: '스윙 도어',
-          link: '/company/map',
+          link: '/products/swing',
         },
         {
           title: '파티션',
-          link: '/company/map',
-        },
-        {
-          title: '하드웨어',
-          link: '/company/map',
+          link: '/products/partition',
         },
       ],
     },
@@ -174,14 +170,14 @@ const ListDataArr = [
           title: '유리 카다로그',
           link: '/company/map',
         },
-        {
-          title: '시방서',
-          link: '/company/map',
-        },
-        {
-          title: '미소테크 소식',
-          link: '/company/map',
-        },
+        // {
+        //   title: '시방서',
+        //   link: '/company/map',
+        // },
+        // {
+        //   title: '미소테크 소식',
+        //   link: '/company/map',
+        // },
         {
           title: '중문상식',
           link: '/company/map',

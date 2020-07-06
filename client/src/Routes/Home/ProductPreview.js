@@ -90,7 +90,7 @@ const ProductPreview = () => {
             <br />
             가볍고 모던한 느낌으로 인테리어 도어로서 큰 인기를 얻고 있습니다.
           </Content>
-          <Link to="/company/map">
+          <Link to="/products">
             <Button>view more</Button>
           </Link>
         </SecondBox>
