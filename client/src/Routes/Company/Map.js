@@ -19,10 +19,8 @@ const Text = styled.span`
 `;
 
 const Wrap = styled.div`
-  margin-top: 3vw;
   &:last-child {
-    margin-top: 0;
-    padding: 3vw 5vw;
+    padding: 0 5vw;
   }
 `;
 
@@ -69,15 +67,18 @@ const Map = () => {
         참고하셔서 편안하게 오시기 바랍니다.
       </Text>
       <Wrap>
-        <RenderAfterNavermapsLoaded clientId="2zwuxnq8jh">
+        <RenderAfterNavermapsLoaded
+          ncpClientId={'2zwuxnq8jh'} // 자신의 네이버 계정에서 발급받은 Client ID
+          error={<p>Maps Load Error</p>}
+          loading={<p>Maps Loading...</p>}>
           <NaverMap
             mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
             style={{
               width: '100%',
-              height: '50vw',
+              height: '40vw',
             }}
             defaultCenter={{ lat: 37.3595704, lng: 127.105399 }}
-            defaultZoom={10}
+            defaultZoom={15}
           />
         </RenderAfterNavermapsLoaded>
       </Wrap>
