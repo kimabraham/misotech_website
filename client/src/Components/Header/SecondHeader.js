@@ -251,7 +251,7 @@ const SecondHeader = () => {
         <List>
           {ListDataArr.map((list, index) => (
             <Item key={index}>
-              <SLink to="/">{list.mainTitle}</SLink>
+              <SLink>{list.mainTitle}</SLink>
               <Dropdown data={list.dropdownData} />
             </Item>
           ))}
