@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RenderAfterNavermapsLoaded, NaverMap } from 'react-naver-maps';
+import MapComponent from './MapComponent';
 
 const Container = styled.div`
+  width: 100%;
   padding: 2vw 10vw;
 `;
 
@@ -10,16 +11,23 @@ const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
   color: red;
-  margin-bottom: 20px;
+  margin: 0 0 40px 5vw;
 `;
 
-const Text = styled.span`
+const Text = styled.p`
   font-size: 18px;
   line-height: 24px;
+  margin-left: 5vw;
 `;
 
 const Wrap = styled.div`
+  width: 100%;
+  margin: 2vw 0;
+  display: flex;
+  justify-content: center;
   &:last-child {
+    display: block;
+    margin: 0 0 3vw 0;
     padding: 0 5vw;
   }
 `;
@@ -61,26 +69,10 @@ const Map = () => {
   return (
     <Container>
       <Title>오시는길</Title>
-      <Text>
-        저희 미소테크로 오시는 길을 안내합니다.
-        <br />
-        참고하셔서 편안하게 오시기 바랍니다.
-      </Text>
+      <Text>저희 미소테크로 오시는 길을 안내합니다.</Text>
+      <Text>참고하셔서 편안하게 오시기 바랍니다.</Text>
       <Wrap>
-        <RenderAfterNavermapsLoaded
-          ncpClientId={'2zwuxnq8jh'} // 자신의 네이버 계정에서 발급받은 Client ID
-          error={<p>Maps Load Error</p>}
-          loading={<p>Maps Loading...</p>}>
-          <NaverMap
-            mapDivId={'maps-getting-started-uncontrolled'} // default: react-naver-map
-            style={{
-              width: '100%',
-              height: '40vw',
-            }}
-            defaultCenter={{ lat: 37.3595704, lng: 127.105399 }}
-            defaultZoom={15}
-          />
-        </RenderAfterNavermapsLoaded>
+        <MapComponent />
       </Wrap>
       <Wrap>
         <Box>

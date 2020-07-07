@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.footer`
+  width: 100%;
   display: flex;
   padding: 20px 10vw 40px 10vw;
   background: black;

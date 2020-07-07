@@ -5,6 +5,7 @@ import backImg from '../../assets/img/moving_img.png';
 import { useState } from 'react';
 
 const Container = styled.div`
+  width: 100%;
   height: 70vh;
   display: flex;
   align-items: center;

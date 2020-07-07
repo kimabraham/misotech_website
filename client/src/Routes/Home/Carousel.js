@@ -8,6 +8,7 @@ import hinge_door from '../../assets/img/productCarousel/hinge_750X750.png';
 import swing_door from '../../assets/img/productCarousel/swing_750X750.png';
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   min-width: 700px;
 `;

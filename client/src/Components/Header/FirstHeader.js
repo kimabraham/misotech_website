@@ -6,11 +6,11 @@ import misoLogo from '../../assets/img/misotech_logo.png';
 import instaIcon from '../../assets/img/icon/instagram_icon.png';
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 22px 180px 5px 180px;
   background-color: #f1f2f6;
-  min-width: 1320px;
 `;
 
 const Column = styled.div`

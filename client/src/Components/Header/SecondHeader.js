@@ -10,13 +10,13 @@ import productImg from '../../assets/img/dropdown_product.png';
 import promotionImg from '../../assets/img/dropdown_promotion.png';
 
 const Container = styled.div`
+  width: 100%;
   height: 33px;
   display: flex;
   background: black;
   padding: 0 180px;
   justify-content: space-between;
   align-items: center;
-  min-width: 1320px;
 `;
 
 const Column = styled.div`
@@ -194,23 +194,23 @@ const ListDataArr = [
       sub_menuArr: [
         {
           title: '모델하우스',
-          link: '/company/introduce',
+          link: '/portfolio/modelhouse',
         },
         {
           title: '아파트',
-          link: '/company/map',
+          link: '/portfolio/apt',
         },
         {
           title: '사무실',
-          link: '/company/map',
+          link: '/portfolio/office',
         },
         {
           title: '드라마협찬',
-          link: '/company/map',
+          link: '/portfolio/drama',
         },
         {
           title: '시공사진',
-          link: '/company/map',
+          link: '/portfolio/install',
         },
       ],
     },
