@@ -17,7 +17,6 @@ const Box = styled.div`
 `;
 
 const ProductContent = ({ datas }) => {
-  console.log(datas);
   return (
     <Container>
       {datas.map((data, index) => (
