@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
-import Scroll, { Element, scroller } from 'react-scroll';
+import Scroll from 'react-scroll';
 
 import portFolioMain from '../../assets/img/portfolio/portfolioMain.png';
 import apt from '../../assets/img/portfolio/apt.png';

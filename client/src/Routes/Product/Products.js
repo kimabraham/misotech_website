@@ -2,16 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { useRef } from 'react';
 import { useEffect } from 'react';
-import Scroll, { Element, scroller } from 'react-scroll';
+import Scroll from 'react-scroll';
 import { withRouter, Link } from 'react-router-dom';
 
 import ProductHeader from '../../assets/img/products/ProductHeader.png';
 import ProductContent from './ProductContent';
-import one1 from '../../assets/img/products/one/oneSliding.png';
-import one2 from '../../assets/img/products/one/oneSliding2.png';
-import one3 from '../../assets/img/products/one/oneSliding3.png';
-import one4 from '../../assets/img/products/one/oneSliding4.png';
-import one5 from '../../assets/img/products/one/oneSliding5.png';
+import one from '../../assets/img/products/one/oneSliding.png';
 
 const Container = styled.div`
   display: flex;
@@ -84,61 +80,31 @@ const Products = (props) => {
       title: '슬라이딩 도어',
       type: 'one',
       ref: oneRef,
-      content: [
-        { file: one1, height: '145.8vw' },
-        { file: one2, height: '104.16vw' },
-        { file: one3, height: '150.52vw' },
-        { file: one4, height: '61.46vw' },
-        { file: one5, height: '143.23vw' },
-      ],
+      content: one,
     },
     {
       title: '연동 도어',
       type: 'link',
       ref: linkRef,
-      content: [
-        { file: one1, height: '145.8vw' },
-        { file: one2, height: '104.16vw' },
-        { file: one3, height: '150.52vw' },
-        { file: one4, height: '61.46vw' },
-        { file: one5, height: '143.23vw' },
-      ],
+      content: one,
     },
     {
       title: '여닫이 도어',
       type: 'hinge',
       ref: hingeRef,
-      content: [
-        { file: one1, height: '145.8vw' },
-        { file: one2, height: '104.16vw' },
-        { file: one3, height: '150.52vw' },
-        { file: one4, height: '61.46vw' },
-        { file: one5, height: '143.23vw' },
-      ],
+      content: one,
     },
     {
       title: '스윙 도어',
       type: 'swing',
       ref: swingRef,
-      content: [
-        { file: one1, height: '145.8vw' },
-        { file: one2, height: '104.16vw' },
-        { file: one3, height: '150.52vw' },
-        { file: one4, height: '61.46vw' },
-        { file: one5, height: '143.23vw' },
-      ],
+      content: one,
     },
     {
       title: '픽스 도어',
       type: 'fix',
       ref: fixRef,
-      content: [
-        { file: one1, height: '145.8vw' },
-        { file: one2, height: '104.16vw' },
-        { file: one3, height: '150.52vw' },
-        { file: one4, height: '61.46vw' },
-        { file: one5, height: '143.23vw' },
-      ],
+      content: one,
     },
   ];
 
@@ -157,37 +123,32 @@ const Products = (props) => {
     switch (path) {
       case 'one':
         scroll.scrollTo(oneOffset - 150, {
-          duration: 1600,
+          duration: 0,
           delay: 0,
-          smooth: 'easeInOutQuart',
         });
         break;
       case 'link':
         scroll.scrollTo(linkOffset - 150, {
-          duration: 1600,
+          duration: 0,
           delay: 0,
-          smooth: 'easeInOutQuart',
         });
         break;
       case 'hinge':
         scroll.scrollTo(hingeOffset - 150, {
-          duration: 1600,
+          duration: 0,
           delay: 0,
-          smooth: 'easeInOutQuart',
         });
         break;
       case 'swing':
         scroll.scrollTo(swingOffset - 150, {
-          duration: 1600,
+          duration: 0,
           delay: 0,
-          smooth: 'easeInOutQuart',
         });
         break;
       case 'fix':
         scroll.scrollTo(fixOffset - 150, {
-          duration: 1600,
+          duration: 0,
           delay: 0,
-          smooth: 'easeInOutQuart',
         });
         break;
 

@@ -4,7 +4,7 @@ import ProductPreview from './ProductPreview';
 import CompanyPreview from './CompanyPreview';
 import DramaPreview from './DramaPreview';
 import Partners from './Partners';
-import ContactUs from './ContactUs';
+// import ContactUs from './ContactUs';
 
 const Home = () => {
   return (

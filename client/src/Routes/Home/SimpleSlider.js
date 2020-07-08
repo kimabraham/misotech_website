@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import one_sliding_door from '../../assets/img/productCarousel/one_sliding_door.png';

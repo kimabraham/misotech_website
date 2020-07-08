@@ -22,12 +22,6 @@ const Preload = styled.div`
   display: none;
 `;
 
-const TitleBox = styled.div``;
-
-const Title = styled.h1``;
-
-const Text = styled.span``;
-
 const NavbarContainer = styled.div`
   > span {
     text-transform: uppercase;
