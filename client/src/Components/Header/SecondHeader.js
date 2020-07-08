@@ -150,7 +150,7 @@ const ListDataArr = [
         },
         {
           title: '파티션',
-          link: '/products/partition',
+          link: '/products/fix',
         },
       ],
     },
