@@ -12,6 +12,7 @@ import Intro from '../Routes/Company/Intro';
 import Map from '../Routes/Company/Map';
 import Products from '../Routes/Product/Products';
 import Portfolio from '../Routes/Portfolio/Portfolio';
+import ProductCatalogue from '../Routes/Catalogue/ProductCatalogue';
 
 export default () => (
   <Router>
@@ -23,6 +24,7 @@ export default () => (
         <Route path="/company/map" exact component={Map} />
         <Route path="/products/:id" exact component={Products} />
         <Route path="/portfolio/:id" exact component={Portfolio} />
+        <Route path="/promotion/product" exact component={ProductCatalogue} />
         <Redirect from="*" to="/" />
       </Switch>
       <Footer />

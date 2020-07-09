@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 import Scroll from 'react-scroll';
 
-import portFolioMain from '../../assets/img/portfolio/portfolioMain.png';
+import portfolioHeader from '../../assets/img/portfolio/portfolioHeader.png';
 import apt from '../../assets/img/portfolio/apt.png';
 import office from '../../assets/img/portfolio/office.png';
 import drama from '../../assets/img/portfolio/drama.png';
@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   width: 100%;
-  height: 24.74vw;
+  height: calc((415 / 1920) * 100vw);
   background: url(${(props) => props.back});
   background-size: contain;
   background-position: center;
@@ -96,7 +96,7 @@ const Portfolio = (props) => {
 
   return (
     <Container>
-      <Header back={portFolioMain} />
+      <Header back={portfolioHeader} />
       <ImgBox>
         <Body ref={modelRef} src={modelHouse} alt="modelHouse" />
         <Body ref={aptRef} src={apt} alt="apt" />

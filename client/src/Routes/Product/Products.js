@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import Scroll from 'react-scroll';
 import { withRouter, Link } from 'react-router-dom';
 
-import ProductHeader from '../../assets/img/products/ProductHeader.png';
+import ProductHeader from '../../assets/img/products/productHeader.png';
 import ProductContent from './ProductContent';
 import one from '../../assets/img/products/one/oneSliding.png';
 import MenuBar from './MenuBar';
@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Header = styled.div`
   width: 100%;
-  height: 20.42vw;
+  height: calc((415 / 1920) * 100vw);
   background: url(${(props) => props.back});
   background-size: cover;
   background-position: center;

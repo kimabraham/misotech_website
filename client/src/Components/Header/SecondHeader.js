@@ -164,7 +164,7 @@ const ListDataArr = [
       sub_menuArr: [
         {
           title: '중문 카다로그',
-          link: '/company/introduce',
+          link: '/promotion/product',
         },
         {
           title: '유리 카다로그',

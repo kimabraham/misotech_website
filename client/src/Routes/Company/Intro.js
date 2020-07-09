@@ -5,6 +5,9 @@ import IntroBody from '../../assets/img/company/IntroBody.png';
 
 const Container = styled.div`
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Header = styled.div`
@@ -13,23 +16,19 @@ const Header = styled.div`
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 20.42vw;
+  height: calc((415 / 1920) * 100vw);
 `;
 
-const Body = styled.div`
-  width: 100%;
-  background: url(${IntroBody});
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 162.8vw;
+const Body = styled.img`
+  width: 60vw;
+  margin-top: 3vw;
 `;
 
 const Intro = () => {
   return (
     <Container>
       <Header />
-      <Body />
+      <Body src={IntroBody} alt="introCompany" />
     </Container>
   );
 };
