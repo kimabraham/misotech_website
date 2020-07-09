@@ -8,6 +8,7 @@ import { withRouter, Link } from 'react-router-dom';
 import ProductHeader from '../../assets/img/products/ProductHeader.png';
 import ProductContent from './ProductContent';
 import one from '../../assets/img/products/one/oneSliding.png';
+import MenuBar from './MenuBar';
 
 const Container = styled.div`
   display: flex;
@@ -37,37 +38,6 @@ const MenuBox = styled.div`
   margin-bottom: 4.427vw;
 `;
 
-const Menu = styled.div`
-  margin-right: 6.25vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  :hover {
-    > span {
-      color: red;
-      font-weight: bold;
-    }
-    > div {
-      background: red;
-    }
-  }
-`;
-
-const Title = styled(Link)`
-  cursor: pointer;
-  font-size: 1.5625vw;
-  font-weight: ${(props) => (props.value ? 'bold' : 'nomal')};
-  color: ${(props) => (props.value ? 'red' : 'black')};
-`;
-
-const HoverBar = styled.div`
-  width: 5.2vw;
-  height: 6px;
-  background: ${(props) => (props.value ? 'red' : 'transparent')};
-`;
-
 const Products = (props) => {
   const oneRef = useRef();
   const linkRef = useRef();
@@ -78,31 +48,26 @@ const Products = (props) => {
   const ProductInfoArr = [
     {
       title: '슬라이딩 도어',
-      type: 'one',
       ref: oneRef,
       content: one,
     },
     {
       title: '연동 도어',
-      type: 'link',
       ref: linkRef,
       content: one,
     },
     {
       title: '여닫이 도어',
-      type: 'hinge',
       ref: hingeRef,
       content: one,
     },
     {
       title: '스윙 도어',
-      type: 'swing',
       ref: swingRef,
       content: one,
     },
     {
       title: '픽스 도어',
-      type: 'fix',
       ref: fixRef,
       content: one,
     },
@@ -160,20 +125,12 @@ const Products = (props) => {
   return (
     <Container>
       <Header back={ProductHeader} />
-      {ProductInfoArr.map((data, index) => (
-        <React.Fragment key={index}>
-          <MenuBox ref={data.ref}>
-            {ProductInfoArr.map((info, index) => (
-              <Menu key={index}>
-                <Title></Title>
-                <Title to={info.type} value={path === info.type}>
-                  {info.title}
-                </Title>
-                <HoverBar value={path === info.type} />
-              </Menu>
-            ))}
+      {ProductInfoArr.map((infos, a) => (
+        <React.Fragment key={alert}>
+          <MenuBox ref={infos.ref}>
+            <MenuBar index={a} />
           </MenuBox>
-          <ProductContent datas={data.content} />
+          <ProductContent datas={infos.content} />
         </React.Fragment>
       ))}
     </Container>

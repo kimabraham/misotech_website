@@ -23,13 +23,15 @@ const Header = styled.div`
   background-repeat: no-repeat;
 `;
 
-const Body = styled.div`
-  margin: 10vw 0;
-  height: 63.5vw;
-  background: url(${(props) => props.back});
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+const ImgBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Body = styled.img`
+  width: 60vw;
+  margin: 5vw 0;
 `;
 
 const Portfolio = (props) => {
@@ -95,11 +97,13 @@ const Portfolio = (props) => {
   return (
     <Container>
       <Header back={portFolioMain} />
-      <Body ref={modelRef} back={modelHouse} />
-      <Body ref={aptRef} back={apt} />
-      <Body ref={officeRef} back={office} />
-      <Body ref={dramaRef} back={drama} />
-      <Body ref={installRef} back={install} />
+      <ImgBox>
+        <Body ref={modelRef} src={modelHouse} alt="modelHouse" />
+        <Body ref={aptRef} src={apt} alt="apt" />
+        <Body ref={officeRef} src={office} alt="office" />
+        <Body ref={dramaRef} src={drama} alt="drama" />
+        <Body ref={installRef} src={install} alt="install" />
+      </ImgBox>
     </Container>
   );
 };
